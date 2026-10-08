@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------------
+   Sunrays Vidhyalaya — Design Tokens
+   Ivory paper + deep navy ink + saffron-gold hairline accent.
+   ------------------------------------------------------------------ */
+
+:root {
+  /* Surfaces */
+  --paper: #f7f3ec; /* ivory page */
+  --paper-2: #efe8dc; /* alt section */
+  --porcelain: #fbfaf7; /* cards / photo mats */
+
+  /* Ink */
+  --ink: #0e1638; /* deep navy text / dark sections */
+  --ink-2: #2a3358;
+  --muted: #5e6478; /* body secondary — AA on paper */
+
+  /* Saffron-gold accent — hairlines, small caps, icon strokes only */
+  --sun: #c8892b; /* accent token */
+  --sun-text: #9a6416; /* accent when used as text — AA */
+  --sun-glow: #f2b25c; /* only inside Sunrise effect / light rays */
+
+  /* Hairlines */
+  --line: rgba(14, 22, 56, 0.12);
+  --line-dark: rgba(247, 243, 236, 0.14);
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --d-fast: 240ms;
+  --d-base: 600ms;
+  --d-slow: 1100ms;
+
+  /* Layout */
+  --container: 1440px;
+  --gutter: 20px;
+  --header-h: 72px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --gutter: 56px;
+  }
+}
+
+/* Inverted dark scope */
+.on-ink {
+  --paper-surface: #0e1638;
+  --text-main: #f7f3ec;
+  --text-muted: #b6bcd2;
+  --line-current: var(--line-dark);
+  background-color: var(--ink);
+  color: #f7f3ec;
+}
